@@ -1,39 +1,21 @@
-# Teeth Braces Detection AI - Requirements
-# =========================================
+# Dental Braces Detection AI - Streamlit Cloud Requirements
+# ========================================================
 
-# Core YOLOv8
-ultralytics==8.3.0
+# Web Framework
+streamlit>=1.35.0
 
-# Image Processing
-# Use headless OpenCV for server environments (no GUI). Replacing
-# opencv-python with opencv-python-headless avoids X11/display issues on
-# Streamlit Cloud and other headless hosts.
-opencv-python-headless==4.7.0.72
-pillow==10.4.0
+# Computer Vision & Deep Learning
+ultralytics>=8.0.0
+opencv-python-headless>=4.8.0
 
-# Data Processing
-numpy==1.26.4
-pandas==2.2.2
+# Data & Image Processing
+pillow>=10.0.0
+numpy>=1.24.0,<2.2.0
+pandas>=2.0.0
 
-# Visualization
-matplotlib==3.9.0
-seaborn==0.13.2
-
-# Machine Learning
-scikit-learn==1.5.0
-pyyaml==6.0.2
-
-# Web Application
-streamlit==1.37.0
-
-# Utilities
-tqdm==4.66.4
-
-# NOTE: ultralytics requires PyTorch. If streamlit cloud fails to install
-# a compatible torch binary automatically, consider pinning a CPU-only
-# torch wheel (for example: torch==2.x.x) compatible with the deployment
-# environment or using a smaller model. Test locally first.
-
-# Test runner for smoke tests
-pytest>=7.0.0
-
+# Visualization & Utilities
+matplotlib>=3.7.0
+seaborn>=0.12.0
+scikit-learn>=1.2.0
+pyyaml>=6.0
+tqdm>=4.65.0
