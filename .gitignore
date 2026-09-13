@@ -1,0 +1,22 @@
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.so
+
+# System & OS
+.DS_Store
+.idea/
+.vscode/
+
+# Logs & cache
+*.log
+streamlit.log
+labels.cache
+
+# Training output runs (keep tracked best.pt in teeth-braces-ai/)
+runs/
+braces_dataset_fixed_yolov8/runs/
+!teeth-braces-ai/best.pt

@@ -1,0 +1,35 @@
+# Python virtual environments
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Model weights - track best.pt but exclude other model files
+*.pt
+yolov8*.pt
+!best.pt
+
+# Training runs and cache
+runs/
+logs/
+*.log
+labels.cache/
+
+# Dataset directories (handled in parent .gitignore)
+# braces_dataset_fixed_yolov8/
+
+# Streamlit
+.streamlit/
+
+# Editor and system files
+.DS_Store
+.vscode/
+.idea/
+*.iml
