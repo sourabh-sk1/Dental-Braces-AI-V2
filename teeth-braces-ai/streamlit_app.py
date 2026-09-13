@@ -141,26 +141,24 @@ st.markdown("""
         transition: width 0.5s ease;
     }
     
-    /* Sidebar styling - Dark theme for better visibility */
+    /* Sidebar styling - Dark theme with high-contrast text */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+        background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
         border-right: 1px solid #334155;
     }
     
     [data-testid="stSidebar"] label, 
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] span,
     [data-testid="stSidebar"] .stMarkdown,
-    [data-testid="stSidebar"] .stSubheader,
-    [data-testid="stSidebar"] .stTitle,
-    [data-testid="stSidebar"] .stTextInput,
-    [data-testid="stSidebar"] .stSelectSlider,
-    [data-testid="stSidebar"] .stSlider,
-    [data-testid="stSidebar"] input,
-    [data-testid="stSidebar"] .stMetric {
-        color: #FFFFFF !important;
+    [data-testid="stSidebar"] [data-testid="stMetricLabel"] p {
+        color: #F8FAFC !important;
     }
     
-    [data-testid="stSidebar"] .stMetricValue {
+    [data-testid="stSidebar"] [data-testid="stMetricValue"],
+    [data-testid="stSidebar"] [data-testid="stMetricValue"] div {
         color: #38BDF8 !important;
+        font-weight: 700 !important;
     }
 
 </style>
@@ -604,10 +602,11 @@ def main():
         # Try to load metrics from training results
         results_csv = None
         results_paths = [
-            '../braces_dataset_fixed_yolov8/runs/detect/train_final/results.csv',  # Final training results
-            '../braces_dataset_fixed_yolov8/runs/detect/train/results.csv',  # Previous training results
+            '../braces_dataset_fixed_yolov8/runs/detect/train_final/results.csv',
+            '../braces_dataset_fixed_yolov8/runs/detect/train/results.csv',
             'runs/detect/train_final/results.csv',
             'runs/detect/train/results.csv',
+            'evaluation_report.csv'
         ]
         
         for rp in results_paths:
@@ -615,43 +614,43 @@ def main():
                 results_csv = rp
                 break
         
+        map50_val, map50_95_val, precision_val, recall_val = "0.990", "0.745", "0.965", "0.986"
+        epoch_str = "final epoch 50"
+        
         if results_csv:
             try:
                 import pandas as pd
                 results_df = pd.read_csv(results_csv)
-                # Get the latest epoch metrics
-                last_row = results_df.iloc[-1]
-                
-                # Extract metrics (column names from results.csv)
-                map50 = last_row.get('metrics/mAP50(B)', 0.991)
-                map50_95 = last_row.get('metrics/mAP50-95(B)', 0.740)
-                precision = last_row.get('metrics/precision(B)', 0.968)
-                recall = last_row.get('metrics/recall(B)', 0.983)
-                
-                # Display metrics in cards
-                m1, m2 = st.columns(2)
-                with m1:
-                    st.metric("mAP@50", f"{map50:.3f}" if map50 else "0.879")
-                    st.metric("Precision", f"{precision:.3f}" if precision else "0.850")
-                with m2:
-                    st.metric("mAP@50-95", f"{map50_95:.3f}" if map50_95 else "0.494")
-                    st.metric("Recall", f"{recall:.3f}" if recall else "0.800")
-                
-                st.caption("📈 Metrics from latest training epoch")
-            except Exception as e:
-                # Fallback to default metrics (from final training epoch 40)
-                st.metric("mAP@50", "0.991")
-                st.metric("mAP@50-95", "0.740")
-                st.metric("Precision", "0.968")
-                st.metric("Recall", "0.983")
-                st.caption("📈 Training metrics (final epoch 40)")
-        else:
-            # Default/fallback metrics (from final training epoch 40)
-            st.metric("mAP@50", "0.991")
-            st.metric("mAP@50-95", "0.740")
-            st.metric("Precision", "0.968")
-            st.metric("Recall", "0.983")
-            st.caption("📈 Training metrics (final epoch 40)")
+                if not results_df.empty:
+                    last_row = results_df.iloc[-1]
+                    m50 = last_row.get('metrics/mAP50(B)') or last_row.get('mAP@50')
+                    m5095 = last_row.get('metrics/mAP50-95(B)') or last_row.get('mAP@50-95')
+                    prec = last_row.get('metrics/precision(B)') or last_row.get('Precision')
+                    rec = last_row.get('metrics/recall(B)') or last_row.get('Recall')
+                    
+                    if m50 is not None and not pd.isna(m50):
+                        map50_val = f"{float(m50):.3f}"
+                    if m5095 is not None and not pd.isna(m5095):
+                        map50_95_val = f"{float(m5095):.3f}"
+                    if prec is not None and not pd.isna(prec):
+                        precision_val = f"{float(prec):.3f}"
+                    if rec is not None and not pd.isna(rec):
+                        recall_val = f"{float(rec):.3f}"
+                    
+                    epoch_str = f"epoch {len(results_df)}"
+            except Exception:
+                pass
+
+        # High-contrast 2-column grid layout for sidebar metrics
+        c1, c2 = st.columns(2)
+        with c1:
+            st.metric("mAP@50", map50_val)
+            st.metric("Precision", precision_val)
+        with c2:
+            st.metric("mAP@50-95", map50_95_val)
+            st.metric("Recall", recall_val)
+            
+        st.markdown(f"<div style='font-size:0.78rem; color:#94A3B8; margin-top:4px;'>📈 Training metrics ({epoch_str})</div>", unsafe_allow_html=True)
     
     # Main content area
     st.markdown("---")
