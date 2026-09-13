@@ -1,12 +1,9 @@
-# Dental Braces Detection AI - Streamlit Cloud Requirements
-# ========================================================
-
-# Web Framework
-streamlit>=1.35.0
-
-# Computer Vision & Deep Learning
-ultralytics>=8.0.0
+# Headless OpenCV MUST be listed before ultralytics to prevent GUI opencv installation
 opencv-python-headless>=4.8.0
+
+# Web Framework & Deep Learning
+streamlit>=1.35.0
+ultralytics>=8.0.0
 
 # Data & Image Processing
 pillow>=10.0.0
