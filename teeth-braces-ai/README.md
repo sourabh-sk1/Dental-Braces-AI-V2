@@ -1,96 +1,80 @@
-# 🦷 Teeth Braces Placement Detection AI — Web App
+# Teeth Braces Placement Detection AI - Web Dashboard
 
-A Streamlit web application for real-time detection of orthodontic teeth braces brackets and determining if they are correctly or incorrectly placed using YOLOv8.
+A Streamlit web application for real-time detection of orthodontic braces brackets and placement accuracy assessment using YOLOv8 deep neural networks.
 
----
-
-## 📋 Features
-
-- **Single Image Detection**: Upload a dental photo for instant bounding box detection and placement classification.
-- **Batch Processing**: Process multiple dental images simultaneously.
-- **Tooth Position Mapping**: Position-based tooth identification (Central Incisor, Lateral Incisor, Canine, Premolars).
-- **Color-Coded Classification**:
-  - 🟢 **Correct Brace** (Class 0): Properly aligned orthodontic bracket.
-  - 🔴 **Incorrect Brace** (Class 1): Misaligned or improperly placed bracket.
-- **Confidence Threshold Slider**: Interactively filter detections.
-- **CSV Result Export**: Download detection metrics and bracket status as CSV.
+[Live Application Demo](https://dental-braces-ai-v2.streamlit.app) | [Source Code Repository](https://github.com/sourabh-sk1/Dental-Braces-AI-V2)
 
 ---
 
-## 📊 Final Model Performance
+## Capabilities
 
-Metrics from the completed training run (Epoch 40):
-
-|| Metric | Value |
-|| :--- | :---: |
-|| **mAP@50** | **`0.991`** |
-|| **mAP@50-95** | **`0.740`** |
-|| **Precision** | **`0.968`** |
-|| **Recall** | **`0.983`** |
+- **Single Image Evaluation**: Upload a dental image for real-time localized detection and placement classification.
+- **Batch Processing**: Simultaneous evaluation of multiple dental images.
+- **Anatomical Tooth Mapping**: Positional mapping engine supporting Central Incisor (CI), Lateral Incisor (LI), Canine (C), First Premolar (P1), and Second Premolar (P2) identification.
+- **Classification Categories**:
+  - **Correct Brace (Class 0)**: Properly aligned bracket placement.
+  - **Incorrect Brace (Class 1)**: Misaligned or improperly placed bracket.
+- **Interactive Threshold Controls**: Real-time slider for confidence threshold adjustment.
+- **Diagnostic Export**: Structured CSV reporting of bracket coordinates, placement status, and confidence scores.
 
 ---
 
-## 🛠️ Local Development
+## Quantitative Evaluation Metrics
+
+Metrics from the evaluated model test set:
+
+| Metric | Score |
+| :--- | :---: |
+| **mAP@50** | **0.990** |
+| **mAP@50-95** | **0.745** |
+| **Precision** | **0.965** |
+| **Recall** | **0.986** |
+
+---
+
+## Local Environment Setup
 
 ### 1. Installation
 
 ```bash
 cd teeth-braces-ai
-python3.10 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2. Run Application
+### 2. Launch Dashboard
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-Access the app at `http://localhost:8501`.
+Access the dashboard at `http://localhost:8501`.
 
-### Model Weights
+### Model Weights Resolution
 
-The app automatically loads model weights from the following locations (in order of priority):
-1. `best.pt` (local weights in `teeth-braces-ai/`)
-2. `../braces_dataset_fixed_yolov8/runs/detect/train_final/weights/best.pt` (final training weights)
-3. `../braces_dataset_fixed_yolov8/runs/detect/train/weights/best.pt` (previous training weights)
-
----
-
-## 🚀 Streamlit Cloud Deployment
-
-### Option 1: Git-Tracked Weights (Recommended)
-
-1. Fork this repository on GitHub.
-2. Connect your repository on [Streamlit Cloud](https://streamlit.io/cloud) with main script set to `teeth-braces-ai/streamlit_app.py`.
-3. Model weights (`teeth-braces-ai/best.pt`) are tracked in Git and will be automatically available.
-
-### Option 2: External Model Hosting
-
-If Streamlit Cloud has file size limits or you prefer external hosting:
-
-1. Upload `best.pt` to GitHub Releases, Hugging Face, or your own server.
-2. Set the `MODEL_URL` environment variable in Streamlit Cloud Settings pointing to the download URL.
-3. The app will automatically download `best.pt` on startup if not found locally.
+The application automatically resolves model weights from the following paths (in order of priority):
+1. `best.pt` (local weights in `teeth-braces-ai/` or root directory)
+2. `../braces_dataset_fixed_yolov8/runs/detect/train_final/weights/best.pt`
+3. Download via `MODEL_URL` environment variable if configured.
 
 ---
 
-## 🔧 Configuration
+## Streamlit Cloud Deployment
 
-### Model Weights Path
-
-You can specify a custom model weights path in the app sidebar:
-- Default: `best.pt`
-- Alternative: Path to any YOLOv8 `.pt` weights file
-
-### Inference Settings
-
-- **Image Size**: 640, 960, or 1280 (higher = better accuracy but slower)
-- **Confidence Threshold**: 0.0 to 1.0 (default: 0.40 for high precision)
+1. Connect your repository on [Streamlit Cloud](https://share.streamlit.io/) with the main script path set to `teeth-braces-ai/streamlit_app.py`.
+2. Model weights (`teeth-braces-ai/best.pt`) are tracked in Git and will be loaded automatically.
+3. Linux system dependencies (`libgl1`, `libglib2.0-0`) are auto-installed via `packages.txt`.
 
 ---
 
-## 📄 License
+## Configuration
+
+- **Inference Image Size**: 640, 960, or 1280 pixels.
+- **Confidence Threshold**: 0.00 to 1.00 (default: 0.40).
+
+---
+
+## License
 
 MIT License
