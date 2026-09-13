@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Live App](https://img.shields.io/badge/Live_App-Streamlit_Cloud-FF4B4B?style=for-the-badge&logo=streamlit)](https://dental-braces-ai-v2.streamlit.app)
+[![Live App](https://img.shields.io/badge/Live_App-Streamlit_Cloud-FF4B4B?style=for-the-badge&logo=streamlit)](https://dental-braces-ai-v2-6wnplzjxjpdx5bb4ojxjts.streamlit.app/)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/sourabh-sk1/Dental-Braces-AI-V2)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00599C?style=for-the-badge)](https://github.com/ultralytics/ultralytics)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python)](https://www.python.org/)
@@ -10,7 +10,7 @@
 
 An enterprise-grade computer vision solution for automated detection and placement accuracy assessment of orthodontic braces using YOLOv8 deep neural networks.
 
-[Live Demo](https://dental-braces-ai-v2.streamlit.app) | [Repository](https://github.com/sourabh-sk1/Dental-Braces-AI-V2) | [System Architecture](#system-architecture) | [Model Performance](#model-performance) | [Deployment](#deployment-guide)
+[Live Demo](https://dental-braces-ai-v2-6wnplzjxjpdx5bb4ojxjts.streamlit.app/) | [Repository](https://github.com/sourabh-sk1/Dental-Braces-AI-V2) | [System Architecture](#system-architecture) | [Model Performance](#model-performance) | [Deployment](#deployment-guide)
 
 </div>
 
@@ -21,7 +21,7 @@ An enterprise-grade computer vision solution for automated detection and placeme
 Dental Braces Detection AI is a specialized deep-learning application designed to assist dental professionals and researchers in identifying orthodontic brackets and evaluating their positioning accuracy. Powered by an optimized YOLOv8 neural network architecture, the system provides automated detection of orthodontic hardware, categorizing brackets into correct or incorrect placements with high precision and sub-30ms inference latency.
 
 ### Live System Access
-- **Web Application**: [https://dental-braces-ai-v2.streamlit.app](https://dental-braces-ai-v2.streamlit.app)
+- **Web Application**: [https://dental-braces-ai-v2-6wnplzjxjpdx5bb4ojxjts.streamlit.app/](https://dental-braces-ai-v2-6wnplzjxjpdx5bb4ojxjts.streamlit.app/)
 - **Source Code Repository**: [https://github.com/sourabh-sk1/Dental-Braces-AI-V2](https://github.com/sourabh-sk1/Dental-Braces-AI-V2)
 
 ---

@@ -2,7 +2,7 @@
 
 A Streamlit web application for real-time detection of orthodontic braces brackets and placement accuracy assessment using YOLOv8 deep neural networks.
 
-[Live Application Demo](https://dental-braces-ai-v2.streamlit.app) | [Source Code Repository](https://github.com/sourabh-sk1/Dental-Braces-AI-V2)
+[Live Application Demo](https://dental-braces-ai-v2-6wnplzjxjpdx5bb4ojxjts.streamlit.app/) | [Source Code Repository](https://github.com/sourabh-sk1/Dental-Braces-AI-V2)
 
 ---
 
