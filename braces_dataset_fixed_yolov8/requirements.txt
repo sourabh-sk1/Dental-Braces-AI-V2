@@ -4,8 +4,8 @@
 # YOLOv8 - Ultralytics library for object detection
 ultralytics>=8.0.0
 
-# OpenCV - For image processing and visualization
-opencv-python>=4.8.0
+# OpenCV - Headless version for Streamlit Cloud compatibility
+opencv-python-headless>=4.8.0
 
 # NumPy - For numerical operations
 numpy>=1.24.0

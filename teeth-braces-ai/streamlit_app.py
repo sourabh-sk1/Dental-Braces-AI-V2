@@ -18,7 +18,26 @@ import os
 import sys
 from pathlib import Path
 import streamlit as st
-import cv2
+
+# Safe import of OpenCV with automatic runtime installation fallback (Streamlit Cloud fix)
+try:
+    import cv2
+except ImportError:
+    import subprocess
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python-headless"])
+        import cv2
+    except Exception:
+        st.error(
+            "### ❌ Missing OpenCV Dependency (`cv2`)\n\n"
+            "Unable to import or install `opencv-python-headless`.\n\n"
+            "**To fix on Streamlit Cloud:**\n"
+            "1. Ensure `opencv-python-headless>=4.8.0` is in `requirements.txt`.\n"
+            "2. Ensure `libgl1` and `libglib2.0-0` are in `packages.txt`.\n"
+            "3. Reboot or redeploy your app on Streamlit Cloud."
+        )
+        st.stop()
+
 import numpy as np
 from PIL import Image
 from ultralytics import YOLO
