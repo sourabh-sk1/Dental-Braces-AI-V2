@@ -1,206 +1,150 @@
 # Dental Braces Detection AI
 
-<div align="center">
+A research-focused object-detection pipeline for orthodontic bracket detection in dental imagery. This repository implements a leakage-safe dataset workflow, reproducible training and evaluation scripts, baseline comparisons, and a complete ablation study for the final model configuration.
 
-[![Live App](https://img.shields.io/badge/Live_App-Streamlit_Cloud-FF4B4B?style=for-the-badge&logo=streamlit)](https://dental-braces-ai-v2-nq9c8flmqzu8oeb2jeqytz.streamlit.app/)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/sourabh-sk1/Dental-Braces-AI-V2)
-[![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00599C?style=for-the-badge)](https://github.com/ultralytics/ultralytics)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+## Overview
 
-An enterprise-grade computer vision solution for automated detection and placement accuracy assessment of orthodontic braces using YOLOv8 deep neural networks.
+This project was built to address a critical data-leakage issue in the original dataset pipeline by enforcing a source-disjoint split before augmentation and model training. The result is a cleaner and more defensible evaluation setup for dental brace detection.
 
-[Live Demo](https://dental-braces-ai-v2-nq9c8flmqzu8oeb2jeqytz.streamlit.app/) | [Repository](https://github.com/sourabh-sk1/Dental-Braces-AI-V2) | [System Architecture](#system-architecture) | [Model Performance](#model-performance) | [Deployment](#deployment-guide)
+The repository includes:
+- Source-based dataset splitting with leakage checks
+- Training and validation of the primary YOLOv8 pipeline
+- Test-set evaluation and error analysis
+- Baseline model comparisons
+- A 12-run ablation grid covering class-weight and mosaic variations across seeds
+- Evidence files for paper-ready reporting and reproducibility
 
-</div>
+## Key updates included in this version
 
----
+- Fixed the dataset leakage problem by splitting on source identity before augmentation
+- Kept the original source images and labels untouched in the original dataset folder
+- Wrote the transformed leak-safe dataset to [braces_dataset_v3](braces_dataset_v3)
+- Restricted augmentation to the training split only
+- Added final evaluation and summary reporting in [results](results)
+- Completed the full ablation study across the required 2 x 2 x 3 design
+- Pinned the environment dependencies and added project licensing files
+- Cleaned the project documentation to reflect only evidence-backed outputs
 
-## Executive Summary
+## Methodology
 
-Dental Braces Detection AI is a specialized deep-learning application designed to assist dental professionals and researchers in identifying orthodontic brackets and evaluating their positioning accuracy. Powered by an optimized YOLOv8 neural network architecture, the system provides automated detection of orthodontic hardware, categorizing brackets into correct or incorrect placements with high precision and sub-30ms inference latency.
+1. Source-aware split: images were partitioned by source ID to prevent near-duplicate examples from appearing across train/val/test.
+2. Training-only augmentation: augmentations were applied only to the training split to avoid leakage into validation and testing.
+3. Benchmarking: the main model was trained and evaluated on the leak-free split.
+4. Comparison: YOLOv8n, YOLOv8s, YOLOv5nu, and a scratch-trained YOLOv8n baseline were compared under the same dataset conditions.
+5. Ablation study: class-weight and mosaic variations were tested across multiple seeds to quantify sensitivity of the final design.
 
-### Live System Access
-- **Web Application**: [https://dental-braces-ai-v2-nq9c8flmqzu8oeb2jeqytz.streamlit.app/](https://dental-braces-ai-v2-nq9c8flmqzu8oeb2jeqytz.streamlit.app/)
-- **Source Code Repository**: [https://github.com/sourabh-sk1/Dental-Braces-AI-V2](https://github.com/sourabh-sk1/Dental-Braces-AI-V2)
+## Current evidence-backed results
 
----
+All values below are taken from the generated outputs in [results](results) and represent the current repository state.
 
-## System Capabilities
+### Main model on the leak-free test split
 
-- **Automated Bracket Detection**: High-resolution localized detection of individual orthodontic brackets across maxillary and mandibular dental arches.
-- **Placement Assessment**: Real-time classification of bracket positioning into two distinct categories:
-  - **Correct Brace (Class 0)**: Properly aligned bracket placement according to clinical standards.
-  - **Incorrect Brace (Class 1)**: Misaligned, rotated, or improperly positioned bracket placement.
-- **Anatomical Tooth Mapping**: Positional mapping engine supporting Central Incisor (CI), Lateral Incisor (LI), Canine (C), First Premolar (P1), and Second Premolar (P2) identification.
-- **Interactive Streamlit Web Dashboard**:
-  - Single-image and batch image evaluation workflows.
-  - Configurable confidence thresholding (0.00 to 1.00).
-  - Dynamic visual overlays with color-coded bounding boxes.
-  - Structured CSV export for diagnostic reporting.
-- **Cross-Platform Hardware Optimization**:
-  - Apple Silicon Metal Performance Shaders (MPS) acceleration support.
-  - CPU and CUDA GPU compatibility.
-- **Production-Ready Web Service**: Headless OpenCV compatibility, automated fallback weight downloaders, and unit testing suite.
+| Metric | Value |
+| :--- | ---: |
+| Test images | 77 |
+| Test boxes | 422 |
+| Precision | 0.8252 |
+| Recall | 0.7471 |
+| mAP@50 | 0.7511 |
+| mAP@50-95 | 0.4835 |
 
----
+Source: [results/evaluation_report.csv](results/evaluation_report.csv)
 
-## Model Performance
+### Dataset split summary
 
-The deep learning model was evaluated on a held-out test split of 251 clinical dental images. The evaluation results demonstrate high object localization accuracy and class discrimination capabilities.
+| Split | Sources | Images | Boxes |
+| :--- | ---: | ---: | ---: |
+| Train | 359 | 1,741 | 9,936 |
+| Validation | 77 | 77 | 452 |
+| Test | 77 | 77 | 422 |
 
-### Global Evaluation Metrics
+Source: [results/split_summary.json](results/split_summary.json)
 
-| Metric | Score | Definition |
-| :--- | :---: | :--- |
-| **mAP@50** | **0.990** | Mean Average Precision at 0.50 IoU threshold |
-| **mAP@50-95** | **0.745** | Mean Average Precision averaged across 0.50 to 0.95 IoU thresholds |
-| **Precision** | **0.965** | Ratio of true positive bracket detections over total positive predictions |
-| **Recall** | **0.986** | Ratio of true positive bracket detections over ground truth annotations |
+### Baseline comparison
 
-### Class-Specific Breakdown
+| Model | Precision | Recall | mAP@50 | mAP@50-95 | CPU latency (ms) |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| yolov8n (main pretrained) | 0.8252 | 0.7471 | 0.7511 | 0.4835 | 23.68 |
+| yolov8s | 0.8394 | 0.8350 | 0.8142 | 0.5373 | 49.59 |
+| yolov5nu | 0.8375 | 0.8433 | 0.7970 | 0.5262 | 23.97 |
+| yolov8n_scratch | 0.7955 | 0.8454 | 0.8010 | 0.4939 | 21.90 |
 
-| Class Name | Target Category | Precision | Recall | mAP@50 | mAP@50-95 |
-| :--- | :--- | :---: | :---: | :---: | :---: |
-| **Correct Brace** | Properly placed bracket | 0.966 | 0.984 | 0.991 | 0.721 |
-| **Incorrect Brace** | Misaligned placement | 0.964 | 0.988 | 0.990 | 0.768 |
+Source: [results/baselines.csv](results/baselines.csv)
 
----
+### Latency benchmark
 
-## Dataset Characteristics
+| Metric | Value |
+| :--- | ---: |
+| Native device (MPS) mean latency | 12.11 ms |
+| Native device median latency | 9.90 ms |
+| Forced CPU mean latency | 19.43 ms |
+| Forced CPU median latency | 18.96 ms |
+| Model weight size | 5.94 MB |
+| Parameters | 3,011,238 |
+| GFLOPs | 8.19 |
 
-- **Total Annotated Images**: 2,490 high-resolution dental photographs.
-- **Unique Base Photographs**: 513 distinct clinical source photos.
-- **Data Splits**:
-  - **Training Set**: 1,741 images (6,627 correct brace annotations, 3,268 incorrect brace annotations).
-  - **Validation Set**: 498 images.
-  - **Test Set**: 251 images.
-- **Class Balance Mitigation**: Loss weight balancing (`cls=1.2`) and mosaic data augmentations applied during training to handle class distribution ratios.
+Source: [results/latency.json](results/latency.json)
 
----
+### Ablation study status
 
-## System Architecture
+The required ablation matrix has been completed as a full 12-run grid:
+- class loss weights: 0.5, 1.2
+- mosaic settings: 1.0, 0.0
+- seeds: 0, 1, 2
 
-```
-Dental-Braces-Detection-AI/
-├── README.md                              # Main system documentation
-├── requirements.txt                       # Production python dependencies
-├── packages.txt                           # Linux system dependencies (libgl1, libglib)
-├── best.pt                            # Fused model weights (~6.2 MB)
-├── teeth-braces-ai/                       # Streamlit Application Service
-│   ├── streamlit_app.py                   # Main web dashboard interface
-│   ├── best.pt                            # Tracked production model weights
-│   ├── detect.py                          # Independent inference module
-│   ├── evaluate.py                        # Model validation engine
-│   ├── requirements.txt                   # App dependency definitions
-│   ├── packages.txt                       # Linux container system packages
-│   ├── tests/                             # Pytest automated test suite
-│   └── utils/                             # Tooth mapping & weight utilities
-├── braces_dataset_fixed_yolov8/           # Dataset & Training Pipeline
-│   ├── data.yaml                          # Dataset specification file
-│   ├── train.py                           # Training pipeline script
-│   ├── detect.py                          # CLI inference interface
-│   ├── webcam_detect.py                   # Real-time webcam feed module
-│   ├── train/                             # Training dataset split
-│   ├── valid/                             # Validation dataset split
-│   └── test/                              # Testing dataset split
-├── evaluation_report.csv                  # Quantitative evaluation summary
-├── confusion_matrix.png                   # Confusion matrix visualization
-└── metrics.png                            # Metric progression charts
-```
+The generated ablation summary is stored in [results/ablation_summary.csv](results/ablation_summary.csv), and the per-run evidence is in [results/ablation_runs.csv](results/ablation_runs.csv).
 
----
+## Repository structure
 
-## Installation & Setup
+- [braces_dataset_fixed_yolov8](braces_dataset_fixed_yolov8): original dataset folder kept intact
+- [braces_dataset_v3](braces_dataset_v3): leakage-safe split dataset written for training and evaluation
+- [results](results): evidence files for metrics, split summary, latency, error analysis, and ablations
+- [runs](runs): training and validation artifacts
+- [teeth-braces-ai](teeth-braces-ai): reference project structure and model utilities
+- [split_by_source.py](split_by_source.py): source-disjoint dataset splitting pipeline
+- [train_main.py](train_main.py): main training script
+- [evaluate_main.py](evaluate_main.py): evaluation pipeline
+- [train_baselines.py](train_baselines.py): baseline comparison runs
+- [run_ablation.py](run_ablation.py): ablation study runner
+- [error_analysis.py](error_analysis.py): error breakdown and analysis
+- [benchmark_latency.py](benchmark_latency.py): latency benchmarking
+- [generate_paper_numbers.py](generate_paper_numbers.py): report-generation helper
 
-### Prerequisites
-
-- **Operating System**: macOS (Apple Silicon or Intel), Linux (Debian/Ubuntu), or Windows 10/11.
-- **Python**: Version 3.10 or higher.
-- **Package Manager**: `pip` and `virtualenv`.
-
-### Step 1: Clone Repository
+## Reproduction
 
 ```bash
-git clone https://github.com/sourabh-sk1/Dental-Braces-AI-V2.git
-cd Dental-Braces-AI-V2
+python split_by_source.py
+python dataset_stats.py
+python train_main.py
+python evaluate_main.py
+python error_analysis.py
+python qualitative.py
+python benchmark_latency.py
+python train_baselines.py
+python run_ablation.py
+python generate_paper_numbers.py
 ```
 
-### Step 2: Configure Virtual Environment
+## Validation
+
+The repository test suite was validated in the project environment with:
 
 ```bash
-# Create virtual environment
-python3 -m venv .venv
-
-# Activate virtual environment
-# macOS/Linux:
-source .venv/bin/activate
-# Windows:
-.venv\Scripts\activate
+PATH="$PWD/.venv/bin:$PATH" PYTHONPATH=teeth-braces-ai pytest teeth-braces-ai/tests/ -q
 ```
 
-### Step 3: Install Dependencies
+This passed successfully in the verified environment.
 
-```bash
-pip install -r requirements.txt
-```
+## Research note and limitations
 
----
+This project is intended as a research prototype for automated bracket detection in dental imagery. It is not a clinical decision-support system and should not be used as a substitute for professional dental evaluation, diagnosis, or treatment planning.
 
-## Execution Guide
+## Data and licensing notice
 
-### Launch Web Dashboard Locally
+The repository includes the original dataset folder [braces_dataset_fixed_yolov8](braces_dataset_fixed_yolov8) and the derived leak-safe dataset [braces_dataset_v3](braces_dataset_v3). Before broader public release, verify any dataset consent, licensing, and provenance conditions associated with the original source material and derived annotations.
 
-To start the interactive Streamlit dashboard:
+This repository includes an MIT license in [LICENSE](LICENSE).
 
-```bash
-streamlit run teeth-braces-ai/streamlit_app.py
-```
+## Project status
 
-Access the application in your browser at `http://localhost:8501`.
-
-### Command Line Inference
-
-To run object detection on a single image file via CLI:
-
-```bash
-python teeth-braces-ai/detect.py --image path/to/dental_image.jpg --conf 0.40
-```
-
-### Automated Unit Verification
-
-To run the automated test suite:
-
-```bash
-PYTHONPATH=teeth-braces-ai pytest teeth-braces-ai/tests/
-```
-
----
-
-## Deployment Guide
-
-### Streamlit Community Cloud
-
-1. Push or fork the repository to GitHub: `https://github.com/sourabh-sk1/Dental-Braces-AI-V2`.
-2. Navigate to [Streamlit Cloud](https://share.streamlit.io/).
-3. Click **New App** and configure the following parameters:
-   - **Repository**: `sourabh-sk1/Dental-Braces-AI-V2`
-   - **Branch**: `main`
-   - **Main file path**: `teeth-braces-ai/streamlit_app.py`
-4. Deploy the application.
-
-*Note: The repository includes `packages.txt` (`libgl1`, `libglib2.0-0`) and `opencv-python-headless` to ensure seamless Linux container initialization.*
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for complete details.
-
----
-
-## Citation & Acknowledgments
-
-- **Ultralytics YOLOv8**: Real-time object detection framework.
-- **Streamlit**: Application framework for machine learning workflows.
-- **PyTorch**: Deep learning backend framework.
+The project is in a completed evidence-backed state for the year’s leakage-fix and evaluation workflow, with generated metrics and split artifacts preserved in [results](results).

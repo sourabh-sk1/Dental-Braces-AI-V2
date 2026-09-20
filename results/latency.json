@@ -1,0 +1,76 @@
+{
+  "model_metadata": {
+    "weight_size_mb": 5.94,
+    "parameters": 3011238,
+    "gflops": 8.19,
+    "imgsz": 512,
+    "conf_threshold": 0.4,
+    "iou_threshold": 0.45
+  },
+  "system_environment": {
+    "os": "Darwin 27.0.0",
+    "cpu_model": "Apple M4",
+    "ram_gb": 16.0,
+    "python_version": "3.13.9",
+    "torch_version": "2.14.0",
+    "ultralytics_version": "8.4.150"
+  },
+  "benchmarks": {
+    "native_device": {
+      "device": "mps",
+      "model_load_time_seconds": 0.0128,
+      "preprocess": {
+        "mean_ms": 0.485,
+        "std_ms": 0.207,
+        "median_ms": 0.393,
+        "p95_ms": 0.956
+      },
+      "inference": {
+        "mean_ms": 2.521,
+        "std_ms": 0.768,
+        "median_ms": 2.203,
+        "p95_ms": 3.962
+      },
+      "postprocess": {
+        "mean_ms": 8.337,
+        "std_ms": 3.443,
+        "median_ms": 6.479,
+        "p95_ms": 15.07
+      },
+      "total_wall_clock": {
+        "mean_ms": 12.105,
+        "std_ms": 4.467,
+        "median_ms": 9.902,
+        "p95_ms": 20.227
+      }
+    },
+    "cpu": {
+      "device": "cpu",
+      "model_load_time_seconds": 0.0096,
+      "preprocess": {
+        "mean_ms": 0.377,
+        "std_ms": 0.029,
+        "median_ms": 0.37,
+        "p95_ms": 0.444
+      },
+      "inference": {
+        "mean_ms": 18.118,
+        "std_ms": 2.929,
+        "median_ms": 17.655,
+        "p95_ms": 20.019
+      },
+      "postprocess": {
+        "mean_ms": 0.227,
+        "std_ms": 0.038,
+        "median_ms": 0.226,
+        "p95_ms": 0.259
+      },
+      "total_wall_clock": {
+        "mean_ms": 19.429,
+        "std_ms": 2.956,
+        "median_ms": 18.963,
+        "p95_ms": 21.397
+      }
+    }
+  }
+}

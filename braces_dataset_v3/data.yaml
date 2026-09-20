@@ -1,0 +1,8 @@
+names:
+  0: Correct Brace
+  1: Incorrect Brace
+nc: 2
+path: braces_dataset_v3
+test: test/images
+train: train/images
+val: valid/images

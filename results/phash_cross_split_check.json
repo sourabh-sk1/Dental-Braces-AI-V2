@@ -1,0 +1,74 @@
+[
+  {
+    "split1": "train",
+    "file1": "IMG_0719_JPG.rf.b3bf434bf4e0e080e4265d14b3d879f0.jpg",
+    "source1": "IMG_0719_JPG.jpg",
+    "split2": "valid",
+    "file2": "IMG_0726_JPG.rf.3cb84569e07becd859e5ad7b618349dc.jpg",
+    "source2": "IMG_0726_JPG.jpg",
+    "hamming_distance": 4
+  },
+  {
+    "split1": "train",
+    "file1": "IMG_0725_JPG.rf.2d760d62f373cce29371ecf7841b0894.jpg",
+    "source1": "IMG_0725_JPG.jpg",
+    "split2": "valid",
+    "file2": "IMG_0726_JPG.rf.3cb84569e07becd859e5ad7b618349dc.jpg",
+    "source2": "IMG_0726_JPG.jpg",
+    "hamming_distance": 4
+  },
+  {
+    "split1": "train",
+    "file1": "IMG_0707_JPG.rf.890e94381fe55f8b40ec898b7f445d1b.jpg",
+    "source1": "IMG_0707_JPG.jpg",
+    "split2": "test",
+    "file2": "IMG_0705_JPG.rf.685ef14ba544f7f83eb0a2389f2fbb63.jpg",
+    "source2": "IMG_0705_JPG.jpg",
+    "hamming_distance": 4
+  },
+  {
+    "split1": "train",
+    "file1": "IMG_0708_JPG.rf.10dcd75eccbe75cb0264d03992a8274f.jpg",
+    "source1": "IMG_0708_JPG.jpg",
+    "split2": "test",
+    "file2": "IMG_0705_JPG.rf.685ef14ba544f7f83eb0a2389f2fbb63.jpg",
+    "source2": "IMG_0705_JPG.jpg",
+    "hamming_distance": 4
+  },
+  {
+    "split1": "train",
+    "file1": "IMG_0708_JPG.rf.2fe9a3356241ea8cad91c53c86bbeb64.jpg",
+    "source1": "IMG_0708_JPG.jpg",
+    "split2": "test",
+    "file2": "IMG_0705_JPG.rf.685ef14ba544f7f83eb0a2389f2fbb63.jpg",
+    "source2": "IMG_0705_JPG.jpg",
+    "hamming_distance": 4
+  },
+  {
+    "split1": "train",
+    "file1": "IMG_0708_JPG.rf.c0770dbcc6670f73d7948ef1399feb60.jpg",
+    "source1": "IMG_0708_JPG.jpg",
+    "split2": "test",
+    "file2": "IMG_0705_JPG.rf.685ef14ba544f7f83eb0a2389f2fbb63.jpg",
+    "source2": "IMG_0705_JPG.jpg",
+    "hamming_distance": 4
+  },
+  {
+    "split1": "train",
+    "file1": "IMG_0710_JPG.rf.747a86844db90ce97168f0b931b2545d.jpg",
+    "source1": "IMG_0710_JPG.jpg",
+    "split2": "test",
+    "file2": "IMG_0711_JPG.rf.0f100cc43336708dcaf7135bf5794ac2.jpg",
+    "source2": "IMG_0711_JPG.jpg",
+    "hamming_distance": 4
+  },
+  {
+    "split1": "train",
+    "file1": "IMG_0789_JPG.rf.8c0fb1e305b96d86f827e81936a7a9d7.jpg",
+    "source1": "IMG_0789_JPG.jpg",
+    "split2": "test",
+    "file2": "IMG_0784_JPG.rf.16decc0d979ab5702f440c05d7af73a1.jpg",
+    "source2": "IMG_0784_JPG.jpg",
+    "hamming_distance": 4
+  }
+]

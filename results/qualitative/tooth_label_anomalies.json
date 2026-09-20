@@ -1,0 +1,632 @@
+[
+  {
+    "image": "IMG_0691_JPG.rf.242ddf7007b1f61a3471e85554a55e26.jpg",
+    "tooth_short": "LL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "IMG_0704_JPG.rf.0a46d8931c90c98c3bd8e4799be04195.jpg",
+    "tooth_short": "UL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "IMG_0705_JPG.rf.685ef14ba544f7f83eb0a2389f2fbb63.jpg",
+    "tooth_short": "LR-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "IMG_0711_JPG.rf.0f100cc43336708dcaf7135bf5794ac2.jpg",
+    "tooth_short": "LL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "IMG_0741_JPG.rf.0e785e5529e99199bf79a86c86f6ef87.jpg",
+    "tooth_short": "LL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "IMG_0745_JPG.rf.25aa325f5974d84a8c2bcceb7f3bf9a7.jpg",
+    "tooth_short": "UL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "IMG_0748_JPG.rf.06f43009dd2d18d1393112b33eb97b5c.jpg",
+    "tooth_short": "LL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "IMG_0750_JPG.rf.2cf68f987c8b9d29cbce411b3510e869.jpg",
+    "tooth_short": "LL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "IMG_0784_JPG.rf.16decc0d979ab5702f440c05d7af73a1.jpg",
+    "tooth_short": "UL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "IMG_0814_JPG.rf.52df23f1de951dbffca1c72e6618157b.jpg",
+    "tooth_short": "UR-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image021_jpg.rf.247c3dac7a63a9f77791d6bdef49d8e6.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image021_jpg.rf.247c3dac7a63a9f77791d6bdef49d8e6.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image030_JPG.rf.30a8fe4928bf8c0501a5afabb6603fe9.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image030_JPG.rf.30a8fe4928bf8c0501a5afabb6603fe9.jpg",
+    "tooth_short": "UL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image032_jpg.rf.1853ad9b6b07acb4990d86ff6f636c6d.jpg",
+    "tooth_short": "LL-P2",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image032_jpg.rf.1853ad9b6b07acb4990d86ff6f636c6d.jpg",
+    "tooth_short": "LR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image065_JPG.rf.13e442f95019223e1cb76106b8486f5f.jpg",
+    "tooth_short": "UL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image065_JPG.rf.13e442f95019223e1cb76106b8486f5f.jpg",
+    "tooth_short": "LR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image067_JPG.rf.380ad2417869a2ae0b4582e713ff86cb.jpg",
+    "tooth_short": "LR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image067_JPG.rf.380ad2417869a2ae0b4582e713ff86cb.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image067_JPG.rf.380ad2417869a2ae0b4582e713ff86cb.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image067_JPG.rf.380ad2417869a2ae0b4582e713ff86cb.jpg",
+    "tooth_short": "LL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image069_JPG.rf.325aa680a059d0b7db20babef0cbe097.jpg",
+    "tooth_short": "UL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image079_JPG.rf.78c8bd47db6f022a07a13da2c746b354.jpg",
+    "tooth_short": "UR-P1",
+    "count": 4,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image079_JPG.rf.78c8bd47db6f022a07a13da2c746b354.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 3,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image081_JPG.rf.3168111805b45550f1efc37f395a6a69.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image081_JPG.rf.3168111805b45550f1efc37f395a6a69.jpg",
+    "tooth_short": "UL-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image089_JPG.rf.4f5f1508b750f98bef2d8634c10cfbb3.jpg",
+    "tooth_short": "UR-CI",
+    "count": 3,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image090_JPG.rf.2e735899e8bdbe44a43da3c15d3c0019.jpg",
+    "tooth_short": "UL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image090_JPG.rf.2e735899e8bdbe44a43da3c15d3c0019.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image090_JPG.rf.2e735899e8bdbe44a43da3c15d3c0019.jpg",
+    "tooth_short": "LL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image118_JPG.rf.72119838ca90c41758624b570e938af1.jpg",
+    "tooth_short": "UL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image118_JPG.rf.72119838ca90c41758624b570e938af1.jpg",
+    "tooth_short": "LR-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image118_JPG.rf.72119838ca90c41758624b570e938af1.jpg",
+    "tooth_short": "UL-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image121_JPG.rf.461872b0330e4808f91f6cfb3322f415.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image121_JPG.rf.461872b0330e4808f91f6cfb3322f415.jpg",
+    "tooth_short": "UR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image127_JPG.rf.0160edce7aae8582e58b7b512fad1c8e.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image127_JPG.rf.0160edce7aae8582e58b7b512fad1c8e.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image141_JPG.rf.24da879c8535f17b80679c2d81e16c81.jpg",
+    "tooth_short": "UR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image141_JPG.rf.24da879c8535f17b80679c2d81e16c81.jpg",
+    "tooth_short": "LL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image141_JPG.rf.24da879c8535f17b80679c2d81e16c81.jpg",
+    "tooth_short": "LR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image148_JPG.rf.30a10f7ff9f60d018011be2f8b056fc8.jpg",
+    "tooth_short": "UL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image148_JPG.rf.30a10f7ff9f60d018011be2f8b056fc8.jpg",
+    "tooth_short": "LR-LI",
+    "count": 4,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image154_JPG.rf.41aad34fb93b1fb78471c02bc3fe3565.jpg",
+    "tooth_short": "LL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image180_JPG.rf.07058a05941203fe1267994f6e9e0e3a.jpg",
+    "tooth_short": "UR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image180_JPG.rf.07058a05941203fe1267994f6e9e0e3a.jpg",
+    "tooth_short": "UL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image180_JPG.rf.07058a05941203fe1267994f6e9e0e3a.jpg",
+    "tooth_short": "LR-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image180_JPG.rf.07058a05941203fe1267994f6e9e0e3a.jpg",
+    "tooth_short": "LL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image207_JPG.rf.01b26ee7dcc8f458e398910aaed78a22.jpg",
+    "tooth_short": "LL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image207_JPG.rf.01b26ee7dcc8f458e398910aaed78a22.jpg",
+    "tooth_short": "LR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image214_JPG.rf.62aae75b6b0cba41c328b76dcd250f91.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image217_JPG.rf.2a9bea9ad95d37c786f39484857cc1dd.jpg",
+    "tooth_short": "UR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image217_JPG.rf.2a9bea9ad95d37c786f39484857cc1dd.jpg",
+    "tooth_short": "UL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image223_JPG.rf.4b9f62013c8436be8a5de1aa64e4e46d.jpg",
+    "tooth_short": "UL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image223_JPG.rf.4b9f62013c8436be8a5de1aa64e4e46d.jpg",
+    "tooth_short": "LL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image223_JPG.rf.4b9f62013c8436be8a5de1aa64e4e46d.jpg",
+    "tooth_short": "UR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image223_JPG.rf.4b9f62013c8436be8a5de1aa64e4e46d.jpg",
+    "tooth_short": "LR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image236_JPG.rf.33e702765b740f96be08efab85fe6add.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image244_JPG.rf.12e059904cd2e85d6ede96682d8b4cc0.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image244_JPG.rf.12e059904cd2e85d6ede96682d8b4cc0.jpg",
+    "tooth_short": "UR-P1",
+    "count": 3,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image245_JPG.rf.23e73bbc99b083991358569b4a0ad9b1.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image245_JPG.rf.23e73bbc99b083991358569b4a0ad9b1.jpg",
+    "tooth_short": "UL-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image251_JPG.rf.25492b07bab3e1765557e2210c4e1b08.jpg",
+    "tooth_short": "LR-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image251_JPG.rf.25492b07bab3e1765557e2210c4e1b08.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image251_JPG.rf.25492b07bab3e1765557e2210c4e1b08.jpg",
+    "tooth_short": "LL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image251_JPG.rf.25492b07bab3e1765557e2210c4e1b08.jpg",
+    "tooth_short": "LL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image253_JPG.rf.609cbddd85a89f347eb2405cba432355.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image253_JPG.rf.609cbddd85a89f347eb2405cba432355.jpg",
+    "tooth_short": "LL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image253_JPG.rf.609cbddd85a89f347eb2405cba432355.jpg",
+    "tooth_short": "LR-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image263_JPG.rf.10c8978c54fde9486c294fe882cc7974.jpg",
+    "tooth_short": "UR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image270_JPG.rf.10292840d68989d2d2f4faea52146849.jpg",
+    "tooth_short": "UL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image270_JPG.rf.10292840d68989d2d2f4faea52146849.jpg",
+    "tooth_short": "UR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image279_JPG.rf.4ced7dec9c6981acf678385536a128f5.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image279_JPG.rf.4ced7dec9c6981acf678385536a128f5.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image285_JPG.rf.1b99c3483b9daebc52ce353ae966a416.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image314_JPG.rf.104db56c2c53cf50e9cc826ab5c95ead.jpg",
+    "tooth_short": "UR-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image314_JPG.rf.104db56c2c53cf50e9cc826ab5c95ead.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image345_JPG.rf.196ae331233a09430b9e1bab9949fa4c.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image345_JPG.rf.196ae331233a09430b9e1bab9949fa4c.jpg",
+    "tooth_short": "LL-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image359_JPG.rf.0c8ad45109c574900d2b4f9feb5c2d34.jpg",
+    "tooth_short": "UR-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image376_JPG.rf.02e129c8a5fb41fdbac05299f380ba97.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image376_JPG.rf.02e129c8a5fb41fdbac05299f380ba97.jpg",
+    "tooth_short": "UL-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image391_JPG.rf.12a9056f672ef8493c1cc652cf039cb6.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image391_JPG.rf.12a9056f672ef8493c1cc652cf039cb6.jpg",
+    "tooth_short": "UR-P2",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image391_JPG.rf.12a9056f672ef8493c1cc652cf039cb6.jpg",
+    "tooth_short": "LL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image402_JPG.rf.2ea3ed9daa65fb9f08c1e7adcd450138.jpg",
+    "tooth_short": "LR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image402_JPG.rf.2ea3ed9daa65fb9f08c1e7adcd450138.jpg",
+    "tooth_short": "UL-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image439_JPG.rf.58642b0b0de76ead6043f4243ed8bad2.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image439_JPG.rf.58642b0b0de76ead6043f4243ed8bad2.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image462_JPG.rf.49fb2bc9bd84d7b93429cf511982e557.jpg",
+    "tooth_short": "UL-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image558_JPG.rf.20090148a194bb442caa166b235c59e4.jpg",
+    "tooth_short": "UR-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image560_JPG.rf.3d8c2fe2177716638be56f818f35aa71.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image560_JPG.rf.3d8c2fe2177716638be56f818f35aa71.jpg",
+    "tooth_short": "UR-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image561_JPG.rf.21f4e3076d08f2cab36336c1f7c9b738.jpg",
+    "tooth_short": "UR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image561_JPG.rf.21f4e3076d08f2cab36336c1f7c9b738.jpg",
+    "tooth_short": "LL-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image668_JPG.rf.2e1c6194b8632c6ad6022bd689f3c61f.jpg",
+    "tooth_short": "UL-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image668_JPG.rf.2e1c6194b8632c6ad6022bd689f3c61f.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image726_JPG.rf.05e9172b44ae451d2a93087ea6ccaee0.jpg",
+    "tooth_short": "LL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image726_JPG.rf.05e9172b44ae451d2a93087ea6ccaee0.jpg",
+    "tooth_short": "UR-CI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image750_JPG.rf.09108bae1b2f3dccf10b79fc3472a01b.jpg",
+    "tooth_short": "UL-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image750_JPG.rf.09108bae1b2f3dccf10b79fc3472a01b.jpg",
+    "tooth_short": "UR-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image763_JPG.rf.3faf0e650115c77a01d3d37e91178917.jpg",
+    "tooth_short": "UL-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image763_JPG.rf.3faf0e650115c77a01d3d37e91178917.jpg",
+    "tooth_short": "UR-CAN",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image781_JPG.rf.11eea9d4429214d91cb12e2291369142.jpg",
+    "tooth_short": "LR-LI",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  },
+  {
+    "image": "image781_JPG.rf.11eea9d4429214d91cb12e2291369142.jpg",
+    "tooth_short": "UL-P1",
+    "count": 2,
+    "reason": "Duplicate tooth position label mapped on single image"
+  }
+]

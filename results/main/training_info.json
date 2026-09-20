@@ -1,0 +1,20 @@
+{
+  "training_time_seconds": 1370.61,
+  "hardware": {
+    "os": "Darwin 27.0.0",
+    "cpu": "Apple M4",
+    "ram_gb": 16.0,
+    "device": "mps"
+  },
+  "hyperparameters": {
+    "model": "yolov8n.pt",
+    "epochs": 40,
+    "imgsz": 512,
+    "batch": 16,
+    "cls": 1.2,
+    "box": 7.5,
+    "dfl": 1.5,
+    "mosaic": 1.0,
+    "seed": 42
+  }
+}
