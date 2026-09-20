@@ -94,6 +94,43 @@ The required ablation matrix has been completed as a full 12-run grid:
 
 The generated ablation summary is stored in [results/ablation_summary.csv](results/ablation_summary.csv), and the per-run evidence is in [results/ablation_runs.csv](results/ablation_runs.csv).
 
+### Additional paper metrics and error analysis
+
+#### Dataset leakage evidence (before the fix)
+
+| Metric | Value |
+| :--- | ---: |
+| Total unique source photos | 513 |
+| Leaked sources across splits | 421 |
+| Leakage rate | 82.07% |
+| Train/Valid overlap | 340 sources |
+| Train/Test overlap | 203 sources |
+| Valid/Test overlap | 122 sources |
+| All three splits overlap | 122 sources |
+
+#### Test-set error breakdown
+
+| Metric | Value |
+| :--- | ---: |
+| Total ground-truth boxes | 422 |
+| Total predicted boxes | 445 |
+| True positives | 333 |
+| Class confusion | 12 |
+| Localization error | 1 |
+| False positives | 99 |
+| False negatives | 76 |
+| Low-confidence true positives (0.25 <= conf < 0.40) | 30 |
+
+#### Bootstrap 95% confidence intervals
+
+| Metric | Mean | 95% CI |
+| :--- | ---: | ---: |
+| Precision | 0.7712 | [0.714, 0.829] |
+| Recall | 0.8135 | [0.7455, 0.8732] |
+| F1 score | 0.7913 | [0.7378, 0.8386] |
+
+These values are derived from the error-analysis and confidence-interval outputs in [results/error_summary.json](results/error_summary.json) and [results/PAPER_NUMBERS.md](results/PAPER_NUMBERS.md).
+
 ## Repository structure
 
 - [braces_dataset_fixed_yolov8](braces_dataset_fixed_yolov8): original dataset folder kept intact
