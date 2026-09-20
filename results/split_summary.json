@@ -1,0 +1,29 @@
+{
+  "seed_used": 42,
+  "summary": {
+    "train": {
+      "sources": 359,
+      "images": 1741,
+      "boxes_cls0": 6738,
+      "boxes_cls1": 3198,
+      "total_boxes": 9936,
+      "boxes_per_image": 5.71
+    },
+    "valid": {
+      "sources": 77,
+      "images": 77,
+      "boxes_cls0": 299,
+      "boxes_cls1": 153,
+      "total_boxes": 452,
+      "boxes_per_image": 5.87
+    },
+    "test": {
+      "sources": 77,
+      "images": 77,
+      "boxes_cls0": 275,
+      "boxes_cls1": 147,
+      "total_boxes": 422,
+      "boxes_per_image": 5.48
+    }
+  }
+}

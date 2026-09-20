@@ -1,18 +1,23 @@
 # Headless OpenCV MUST be listed before ultralytics to prevent GUI opencv installation
-opencv-python-headless>=4.8.0
+opencv-python-headless==5.0.0.93
+opencv-python==5.0.0.93
 
 # Web Framework & Deep Learning
-streamlit>=1.35.0
-ultralytics>=8.0.0
+streamlit==1.63.0
+ultralytics==8.4.150
 
 # Data & Image Processing
-pillow>=10.0.0
-numpy>=1.24.0,<2.2.0
-pandas>=2.0.0
+pillow==12.3.0
+numpy==2.5.3
+pandas==3.0.5
+PyYAML==6.0.3
 
 # Visualization & Utilities
-matplotlib>=3.7.0
-seaborn>=0.12.0
-scikit-learn>=1.2.0
-pyyaml>=6.0
-tqdm>=4.65.0
+matplotlib==3.11.2
+scipy==1.18.1
+tabulate==0.10.0
+ImageHash==4.3.2
+torch==2.14.0
+torchvision==0.29.0
+tqdm==4.70.1
+pytest==9.1.1
