@@ -131,6 +131,12 @@ The generated ablation summary is stored in [results/ablation_summary.csv](resul
 
 These values are derived from the error-analysis and confidence-interval outputs in [results/error_summary.json](results/error_summary.json) and [results/PAPER_NUMBERS.md](results/PAPER_NUMBERS.md).
 
+### Visual performance summaries
+
+![Model metrics summary](metrics.png)
+
+![Confusion matrix](confusion_matrix.png)
+
 ## Repository structure
 
 - [braces_dataset_fixed_yolov8](braces_dataset_fixed_yolov8): original dataset folder kept intact
