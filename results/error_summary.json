@@ -1,0 +1,33 @@
+{
+  "total_ground_truth": 422,
+  "total_predictions": 445,
+  "true_positives": 333,
+  "class_confusion": 12,
+  "localization_error": 1,
+  "false_positives": 99,
+  "false_negatives": 76,
+  "low_confidence_true_positives_0.25_to_0.40": 30,
+  "bootstrap_ci_95": {
+    "precision": {
+      "mean": 0.7712,
+      "ci95": [
+        0.714,
+        0.829
+      ]
+    },
+    "recall": {
+      "mean": 0.8135,
+      "ci95": [
+        0.7455,
+        0.8732
+      ]
+    },
+    "f1_score": {
+      "mean": 0.7913,
+      "ci95": [
+        0.7378,
+        0.8386
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "os": "Darwin 27.0.0 (arm64)",
+  "cpu_model": "Apple M4",
+  "ram_gb": 16.0,
+  "gpu_or_mps": "Apple Silicon MPS",
+  "python_version": "3.13.9",
+  "torch_version": "2.14.0",
+  "ultralytics_version": "8.4.150",
+  "opencv_version": "5.0.0",
+  "numpy_version": "2.5.3"
+}
